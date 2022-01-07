@@ -1,0 +1,39 @@
+
+.user-block {
+  display: flex;
+  width: 135px;
+  padding: 20px 0;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (max-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.user-block__link {
+  .text(14px; 17.15px; rgb(@white, 0.5); normal);
+
+  &:hover {
+    color: @white;
+  }
+
+  &:active {
+    color: @active-link;
+  }
+}
+
+.user-block__item {
+  position: relative;
+}
+
+.user-block__item + .user-block__item::before {
+  .pseudo();
+  content: "|";
+  left: 8px;
+  color: rgb(@white, 0.5);
+}
+
+.user-block__item + .user-block__item {
+  padding-left: 18px;
+}

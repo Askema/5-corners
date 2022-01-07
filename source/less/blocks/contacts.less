@@ -1,0 +1,33 @@
+.contacts {
+  column-gap: 50px;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: @tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    order: 3;
+  }
+}
+
+.contacts__item {
+  @media (max-width: @tablet-width) {
+    padding: 15px 0;
+  }
+}
+
+.contacts__link {
+  .text(14px; 17.15px; rgb(@white, 0.5); normal);
+
+  &:hover {
+    color: @white;
+  }
+
+  &:active {
+    color: @active-link;
+  }
+}
+

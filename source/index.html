@@ -14,14 +14,14 @@
 
 <body class="body">
   <header class="header">
-    <div class="header__wrapper">
-      <div class="translate">
-        <ul class="translate__variables">
-          <li class="translate__item"><a href="#" class="translate__link">EN</a></li>
-          <li class="translate__item"><a href="#" class="translate__link translate__link--selected">RU</a></li>
-        </ul>
-      </div>
+    <div class="header__wrapper container">
       <nav class="nav">
+        <div class="nav__translate translate">
+          <ul class="translate__variables">
+            <li class="translate__item"><a href="#" class="translate__link">EN</a></li>
+            <li class="translate__item"><a href="#" class="translate__link translate__link--current">RU</a></li>
+          </ul>
+        </div>
         <ul class="nav__contacts contacts">
           <li class="contacts__item"><a href="#" class="contacts__link">+7 (87922) 2-63-10</a></li>
           <li class="contacts__item"><a href="#" class="contacts__link">О компании</a></li>
@@ -29,20 +29,18 @@
           <li class="contacts__item"><a href="#" class="contacts__link">База знаний</a></li>
           <li class="contacts__item"><a href="#" class="contacts__link">Контакты</a></li>
         </ul>
+        <div class="nav__user-block user-block">
+          <div class="user-block__item"><a href="#" class="user-block__link">Вход</a></div>
+          <div class="user-block__item"><a href="#" class="user-block__link">Регистрация</a></div>
+        </div>
       </nav>
-      <ul class="user-block">
-        <li class="user-block__item"><a href="#" class="user-block__link">Вход</a></li>
-        <li class="user-block__item"><a href="#" class="user-block__link">Регистрация</a></li>
-      </ul>
-    </div>
-    <div class="header__wrapper">
+      <div class="header__logo-wrapper">
+        <a href="#" class="header__link">
+          <img src="img/logo.svg" alt="Логотип" width="104" height="40" class="header__logo">
+        </a>
+      </div>
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <!--Тут будет svg-->
-            </a>
-          </li>
           <li class="nav__item">
             <div class="nav__dropdown dropdown">
               <a href="#" class="nav__link">Найти перевозчика</a>
@@ -54,7 +52,7 @@
             </div>
           </li>
           <li class="nav__item"><a href="#" class="nav__link">Поиск груза</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Перевозчики</a></li>
+          <li class="nav__item nav__item--desktop"><a href="#" class="nav__link">Перевозчики</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Грузоотправители</a></li>
           <li class="nav__item">
             <div class="nav__dropdown dropdown">
@@ -66,20 +64,23 @@
               </ul>
             </div>
           </li>
-          <li class="nav__item"><a href="#" class="nav__link">Разместить груз</a></li>
+          <li class="nav__item"><a href="#" class="nav__link nav__link--place">Разместить груз</a></li>
         </ul>
       </nav>
+      <button type="button" class="header__toggle"></button>
     </div>
   </header>
   <main class="main">
     <section class="search">
-      <h1 class="search__title">Компания Transhub 24</h1>
-      <p class="search__text">Наша цель — свести контакты грузоперевозчиков и грузовладельцев в одном месте, сделав их
-        максимально удобными.</p>
-      <a href="#" class="search__link btn">Найти перевозчика</a>
+      <div class="search__wrapper container">
+        <h1 class="search__title">Компания Transhub 24</h1>
+        <p class="search__text">Наша цель — свести контакты грузоперевозчиков и грузовладельцев в одном месте, сделав их
+          максимально удобными.</p>
+        <a href="#" class="search__link btn">Найти перевозчика</a>
+      </div>
     </section>
     <section class="slider">
-      <div class="slider__wrapper">
+      <div class="slider__wrapper container">
         <div class="slider__viewport">
           <ul class="slider__list">
             <li class="slider__item">
@@ -109,6 +110,7 @@
       </div>
     </section>
   </main>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
