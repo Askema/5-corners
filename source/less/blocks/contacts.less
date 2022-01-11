@@ -29,5 +29,19 @@
   &:active {
     color: @active-link;
   }
+
+  &--fixed {
+    @media (min-width: @tablet-width) {
+      color: @nav-link;
+
+      &:hover {
+        color: @active-link;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 

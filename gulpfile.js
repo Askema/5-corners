@@ -71,9 +71,17 @@ const scripts = () => {
     .pipe(sync.stream());
 }
 
+const jquery = () => {
+  return gulp.src("source/js/jquery.min.js")
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
 exports.scripts = scripts;
 
 exports.scriptsMini = scriptsMini;
+
+exports.jquery = jquery;
 
 // Images
 
@@ -185,6 +193,7 @@ const build = gulp.series(
     html,
     scripts,
     scriptsMini,
+    jquery,
     sprite,
     createWebp
   ),
@@ -203,6 +212,7 @@ exports.default = gulp.series(
     copyStyles,
     html,
     scripts,
+    jquery,
     sprite,
     createWebp
   ),

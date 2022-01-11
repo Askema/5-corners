@@ -21,6 +21,20 @@
   &:active {
     color: @active-link;
   }
+
+  &--fixed {
+    @media (min-width: @tablet-width) {
+      color: @nav-link;
+
+      &:hover {
+        color: @active-link;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 
 .user-block__item {
@@ -32,6 +46,10 @@
   content: "|";
   left: 8px;
   color: rgb(@white, 0.5);
+}
+
+.user-block__item--fixed + .user-block__item--fixed::before {
+  color: @nav-link;
 }
 
 .user-block__item + .user-block__item {

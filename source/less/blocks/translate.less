@@ -14,15 +14,29 @@
 .translate__link {
   .text(14px; 17.15px; rgb(@white, 0.5); normal);
 
-  &--current {
-    color: @active-link;
-  }
-
   &:hover {
     color: @white;
   }
 
   &:active {
+    color: @active-link;
+  }
+
+  &--fixed {
+    @media (min-width: @tablet-width) {
+      color: @nav-link;
+
+      &:hover {
+        color: @active-link;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &--current {
     color: @active-link;
   }
 }
@@ -40,4 +54,8 @@
   content: "/";
   left: 8px;
   color: rgb(@white, 0.5);
+}
+
+.translate__item--fixed + .translate__item--fixed::before {
+  color: @nav-link;
 }

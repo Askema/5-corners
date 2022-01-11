@@ -1,5 +1,35 @@
+.dropdown {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      .pseudo();
+      left: 45%;
+      top: 25px;
+      background-image: url("../../img/arrow.svg");
+      width: 11px;
+      height: 6px;
+    }
+  }
+}
+
 .dropdown__list {
   display: none;
+  position: absolute;
+  background-color: @bacground2;
+  width: 100%;
+  z-index: 1;
+
+  @media (max-width: @tablet-width) {
+    right: -100%;
+    top: 0;
+  }
+
+  &--fixed {
+    @media (min-width: @tablet-width) {
+      background-color: @white;
+    }
+  }
 }
 
 .dropdown__item {
@@ -8,6 +38,8 @@
 
 .dropdown__link {
   .text(16px; 19.6px; @white; normal);
+  padding: 15px 0;
+  display: block;
 
   &:hover {
     color: rgb(@white, 0.5);
@@ -15,5 +47,35 @@
 
   &:active {
     color: @active-link;
+  }
+
+  &--fixed {
+    @media (min-width: @tablet-width) {
+      color: @text-color;
+
+      &:hover {
+        color: @active-link;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.dropdown__svg {
+  fill: @white;
+
+  @media (max-width: @tablet-width) {
+    display: none;
+  }
+
+  position: absolute;
+  left: 45%;
+  bottom: -10px;
+
+  &--fixed {
+    fill: @text-color;
   }
 }

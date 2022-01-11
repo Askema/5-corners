@@ -1,7 +1,22 @@
 .header {
   background-color: @bacground2;
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(to bottom, transparent 89px, @header-line 90px, transparent 45.5px);
+  }
 }
+
+.header--fixed {
+  @media (min-width: @tablet-width) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: @white;
+  }
+}
+
 
 .header__wrapper {
   position: relative;
@@ -72,6 +87,18 @@
       width: 100vw;
       height: 1px;
       background-color: rgb(@white, 0.5);
+    }
+  }
+}
+
+.header__logo {
+  min-width: 104px;
+  min-height: 40px;
+  background: url("../../img/logo.svg") no-repeat;
+
+  &--fixed {
+    @media (min-width: @tablet-width) {
+      background: url("../../img/logo-fixed.svg") no-repeat;
     }
   }
 }

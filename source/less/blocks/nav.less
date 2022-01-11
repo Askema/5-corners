@@ -52,8 +52,17 @@
 }
 
 .nav__item {
+  position: relative;
+
   @media (max-width: @tablet-width) {
     padding: 15px 0;
+  }
+}
+
+.nav__item--dropdown:hover {
+  & .dropdown__list {
+    display: block;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -79,6 +88,20 @@
   &:active {
     color: @active-link;
   }
+
+  &--fixed {
+    @media (min-width: @tablet-width) {
+      color: @text-color;
+
+      &:hover {
+        color: @active-link;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 
 .nav__link--place {
@@ -94,18 +117,18 @@
   }
 
   &:hover {
-    color: rgb(@white, 0.5);
+    color: @nav-link;
 
     &::after {
-      background-color: rgb(@white, 0.5);
+      background-color: @nav-link;
     }
   }
 
   &:active {
-    color: @white;
+    opacity: 0.5;
 
     &::after {
-      background-color: @white;
+      opacity: 0.5;
     }
   }
 }
