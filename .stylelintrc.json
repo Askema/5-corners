@@ -1,0 +1,12 @@
+{
+  "extends": ["stylelint-config-htmlacademy",
+    "stylelint-config-rational-order",
+    "stylelint-prettier/recommended"],
+
+    "plugins": ["stylelint-order", "stylelint-scss"],
+
+  "rules": {
+    "declaration-no-important": true,
+    "indentation": [2, {"ignore": ["inside-parens"]}]
+  }
+}
