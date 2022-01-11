@@ -1,0 +1,26 @@
+.text(@font-size; @line-height; @color:#000000; @font-weight:normal) {
+  color: @color;
+  font-weight: @font-weight;
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.pseudo(@display: block; @position: absolute; @content: "") {
+  position: @position;
+  display: @display;
+  content: @content;
+}
+
+.container(@padding: 0 50px;) {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: @padding;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+  }
+}

@@ -6,43 +6,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/style.min.css" rel="stylesheet preload" as="style">
+  <link rel="preload" href="fonts/AvenirNextCyr-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/AvenirNextCyr-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/AvenirNextCyr-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <title>Transhub 24</title>
 </head>
 
 <body class="body">
   <header class="header">
-    <div class="header__wrapper">
-      <div class="translate">
-        <ul class="translate__variables">
-          <li class="translate__item"><a href="#" class="translate__link">EN</a></li>
-          <li class="translate__item"><a href="#" class="translate__link translate__link--selected">RU</a></li>
-        </ul>
-      </div>
+    <div class="header__wrapper container">
       <nav class="nav">
-        <ul class="nav__contacts">
+        <div class="nav__translate translate">
+          <ul class="translate__variables">
+            <li class="translate__item"><a href="#" class="translate__link">EN</a></li>
+            <li class="translate__item"><a href="#" class="translate__link translate__link--current">RU</a></li>
+          </ul>
+        </div>
+        <ul class="nav__contacts contacts">
           <li class="contacts__item"><a href="#" class="contacts__link">+7 (87922) 2-63-10</a></li>
           <li class="contacts__item"><a href="#" class="contacts__link">О компании</a></li>
           <li class="contacts__item"><a href="#" class="contacts__link">Рекламодателям</a></li>
           <li class="contacts__item"><a href="#" class="contacts__link">База знаний</a></li>
           <li class="contacts__item"><a href="#" class="contacts__link">Контакты</a></li>
         </ul>
+        <div class="nav__user-block user-block">
+          <div class="user-block__item"><a href="#" class="user-block__link">Вход</a></div>
+          <div class="user-block__item"><a href="#" class="user-block__link">Регистрация</a></div>
+        </div>
       </nav>
-      <ul class="user-block">
-        <li class="user-block__item"><a href="#" class="user-block__link">Вход</a></li>
-        <li class="user-block__item"><a href="#" class="user-block__link">Регистрация</a></li>
-      </ul>
-    </div>
-    <div class="header__wrapper">
+      <div class="header__logo-wrapper">
+        <a href="#" class="header__link">
+          <div class="header__logo"></div>
+        </a>
+      </div>
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">
-              <!--Тут будет svg-->
-            </a>
-          </li>
-          <li class="nav__item">
-            <div class="nav__dropdown">
-              <a href="#" class="nav__link">Найти перевозчика</a>
+          <li class="nav__item nav__item--dropdown">
+            <div class="nav__dropdown dropdown">
+              <a href="#" class="nav__link">
+                <span>Найти перевозчика</span>
+                <svg class="dropdown__svg" width="11" height="6" viewBox="0 0 11 6">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </a>
               <ul class="dropdown__list">
                 <li class="dropdown__item"><a href="#" class="dropdown__link">Link 1</a></li>
                 <li class="dropdown__item"><a href="#" class="dropdown__link">Link 2</a></li>
@@ -51,11 +57,16 @@
             </div>
           </li>
           <li class="nav__item"><a href="#" class="nav__link">Поиск груза</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Перевозчики</a></li>
+          <li class="nav__item nav__item--desktop"><a href="#" class="nav__link">Перевозчики</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Грузоотправители</a></li>
-          <li class="nav__item">
-            <div class="nav__dropdown">
-              <a href="#" class="nav__link">Покупка и аренда техники</a>
+          <li class="nav__item nav__item--dropdown">
+            <div class="nav__dropdown dropdown">
+              <a href="#" class="nav__link">
+                <span>Покупка и аренда техники</span>
+                <svg class="dropdown__svg" width="11" height="6" viewBox="0 0 11 6">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </a>
               <ul class="dropdown__list">
                 <li class="dropdown__item"><a href="#" class="dropdown__link">Link 1</a></li>
                 <li class="dropdown__item"><a href="#" class="dropdown__link">Link 2</a></li>
@@ -63,20 +74,23 @@
               </ul>
             </div>
           </li>
-          <li class="nav__item"><a href="#" class="nav__link">Разместить груз</a></li>
+          <li class="nav__item"><a href="#" class="nav__link nav__link--place">Разместить груз</a></li>
         </ul>
       </nav>
+      <button type="button" class="header__toggle"></button>
     </div>
   </header>
   <main class="main">
     <section class="search">
-      <h1 class="search__title">Компания Transhub 24</h1>
-      <p class="search__text">Наша цель — свести контакты грузоперевозчиков и грузовладельцев в одном месте, сделав их
-        максимально удобными.</p>
-      <a href="#" class="search__link btn">Найти перевозчика</a>
+      <div class="search__wrapper container">
+        <h1 class="search__title">Компания Transhub 24</h1>
+        <p class="search__text">Наша цель — свести контакты грузоперевозчиков и грузовладельцев в одном месте, сделав их
+          максимально удобными.</p>
+        <a href="#" class="search__link btn">Найти перевозчика</a>
+      </div>
     </section>
     <section class="slider">
-      <div class="slider__wrapper">
+      <div class="slider__wrapper container">
         <div class="slider__viewport">
           <ul class="slider__list">
             <li class="slider__item">
@@ -85,7 +99,7 @@
                 <div class="slider__img-wrapper">
                   <img src="" alt="" class="slider__img">
                 </div>
-                <form action="" class="slider__form form">
+                <form class="slider__form form">
                   <label for="login" class="form__label">Email или Номер телефона</label>
                   <input type="email" name="login" id="login" class="form__input">
                   <label for="password" class="form__label">Пароль</label>
@@ -106,6 +120,8 @@
       </div>
     </section>
   </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

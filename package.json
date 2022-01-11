@@ -1,7 +1,7 @@
 {
-  "name": "golden-apple",
+  "name": "mishka-22",
   "private": true,
-  "description": "Тестовое задание в компанию Golden Apple",
+  "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.2.5",
@@ -20,15 +20,8 @@
     "gulp-webp": "^4.0.1",
     "postcss": "8.2.8",
     "postcss-csso": "5.0.1",
-    "prettier": "^2.5.1",
-    "stylelint": "^14.0.0",
-    "stylelint-config-htmlacademy": "0.1.4",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-standard": "^24.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-prettier": "^2.0.0",
-    "stylelint-scss": "^4.0.1"
+    "stylelint": "^13.12.0",
+    "stylelint-config-htmlacademy": "0.1.4"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -52,5 +45,8 @@
   ],
   "engines": {
     "node": "14.15.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
