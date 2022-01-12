@@ -11,6 +11,7 @@ const dropdownList = document.querySelectorAll('.dropdown__list');
 const dropdownLink = document.querySelectorAll('.dropdown__link');
 const dropdownSvg = document.querySelectorAll('.dropdown__svg');
 const logo = document.querySelector('.header__logo');
+const heading = document.querySelector('.heading');
 
 nav.forEach(element => element.classList.add('nav--closed'));
 toggle.classList.add('header__toggle--closed');
@@ -35,6 +36,7 @@ window.onscroll = () => {
     dropdownLink.forEach(link => link.classList.add('dropdown__link--fixed'));
     dropdownSvg.forEach(link => link.classList.add('dropdown__svg--fixed'));
     logo.classList.add('header__logo--fixed');
+    heading.classList.add('heading--fixed');
   } else if (window.scrollY < 180) {
     header.classList.remove('header--fixed');
     contactsLink.forEach(link => link.classList.remove('contacts__link--fixed'));
@@ -47,5 +49,6 @@ window.onscroll = () => {
     dropdownLink.forEach(link => link.classList.remove('dropdown__link--fixed'));
     dropdownSvg.forEach(link => link.classList.remove('dropdown__svg--fixed'));
     logo.classList.remove('header__logo--fixed');
+    heading.classList.remove('heading--fixed');
   }
 }
