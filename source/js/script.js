@@ -23,7 +23,7 @@ toggle.addEventListener('click', function (evt) {
 });
 
 window.onscroll = () => {
-  if (window.scrollY > 150) {
+  if (window.scrollY > 180) {
     header.classList.add('header--fixed');
     contactsLink.forEach(link => link.classList.add('contacts__link--fixed'));
     userBlockItem.forEach(link => link.classList.add('user-block__item--fixed'));
@@ -35,7 +35,7 @@ window.onscroll = () => {
     dropdownLink.forEach(link => link.classList.add('dropdown__link--fixed'));
     dropdownSvg.forEach(link => link.classList.add('dropdown__svg--fixed'));
     logo.classList.add('header__logo--fixed');
-  } else if (window.scrollY < 150) {
+  } else if (window.scrollY < 180) {
     header.classList.remove('header--fixed');
     contactsLink.forEach(link => link.classList.remove('contacts__link--fixed'));
     userBlockItem.forEach(link => link.classList.remove('user-block__item--fixed'));

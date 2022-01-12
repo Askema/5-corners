@@ -14,9 +14,19 @@
     left: 0;
     width: 100%;
     background-color: @white;
+    animation: fixedHeader 1s forwards;
   }
 }
 
+@keyframes fixedHeader {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 .header__wrapper {
   position: relative;
@@ -88,6 +98,18 @@
       height: 1px;
       background-color: rgb(@white, 0.5);
     }
+  }
+}
+
+.header__link {
+  display: block;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
