@@ -3,7 +3,6 @@
   justify-content: space-between;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding: 20px 0;
 
   @media (max-width: @tablet-width) {
     &--closed {
@@ -14,6 +13,10 @@
       display: block;
     }
   }
+}
+
+.nav--categories {
+  padding: 20px 0;
 }
 
 .nav:nth-of-type(1) {
@@ -62,7 +65,6 @@
 .nav__item--dropdown:hover {
   & .dropdown__list {
     display: block;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 }
 
