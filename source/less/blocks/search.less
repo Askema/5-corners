@@ -1,10 +1,16 @@
 .search {
   background-color: @background1;
   z-index: 1;
+
+  @media (max-width: @mobile-tablet) {
+    text-align: center;
+  }
 }
 
 .search__title {
   .text(80px; 98px; @white; bold);
+  padding-top: 4px;
+  margin-bottom: 42px;
 
   @media (max-width: @tablet-width) {
     .text(40px; 60px; @white; bold);
@@ -13,4 +19,21 @@
 
 .search__text {
   .text(24px; 33.6px; @white; normal);
+  margin-bottom: 57px;
+
+  & br {
+    @media (max-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.search__link {
+  max-width: 220px;
+  display: block;
+  padding: 16px 0;
+
+  @media (max-width: @mobile-tablet) {
+    margin: 0 auto;
+  }
 }

@@ -8,12 +8,16 @@
 
   @media (max-width: @desktop-width) {
     min-height: 750px;
-    background-size: cover, 100% 736px;
+    margin-bottom: 450px;
+  }
+
+  @media (max-width: @tablet-desktop) {
+    margin-bottom: 300px;
   }
 
   @media (max-width: @tablet-width) {
-    min-height: 700px;
-    background-size: 100% auto, 100% 686px;
+    min-height: 542px;
+    margin-bottom: 100px;
   }
 
   &--fixed {
@@ -36,11 +40,6 @@
   @media (max-width: @tablet-width) {
     width: 45%;
   }
-
-  @media (max-width: @mobile-tablet) {
-    width: 30%;
-    top: -85px;
-  }
 }
 
 .heading__planet {
@@ -62,7 +61,8 @@
     left: -15%;
   }
 
-  @media (max-width: @tablet-width) {
+  @media (max-width: @mobile-tablet) {
+    height: 507px;
     width: 190%;
     left: -45%;
   }
@@ -85,7 +85,8 @@
     left: -15%;
   }
 
-  @media (max-width: @tablet-width) {
+  @media (max-width: @mobile-tablet) {
+    height: 507px;
     width: 190%;
     left: -45%;
   }
@@ -105,12 +106,11 @@
   }
 
   @media (max-width: @tablet-width) {
-    top: 150px;
-    left: 0;
+    top: 30px;
   }
 
   @media (max-width: @mobile-tablet) {
-    top: 210px;
+    top: 239px;
     left: 0;
   }
 }
